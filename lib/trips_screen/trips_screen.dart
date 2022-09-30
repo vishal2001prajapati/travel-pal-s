@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
+import 'local_screen.dart';
 
 class TripsScreen extends StatefulWidget {
   const TripsScreen({Key? key}) : super(key: key);
@@ -51,7 +52,7 @@ class _TripsScreenState extends State<TripsScreen> {
               color: Colors.white,
             )),
         body: Column(
-          children: [
+          children: const [
             SizedBox(
               height: 5,
             ),
@@ -66,6 +67,11 @@ class _TripsScreenState extends State<TripsScreen> {
               ),
               unselectedLabelColor: Color(0xff9FC7C9),
               tabs: [Tab(text: "Everywhere"), Tab(text: "Local")],
+            ),
+            Expanded(
+              child: TabBarView(
+                children: [LocalScreen(),LocalScreen()],
+              ),
             ),
           ],
         ),

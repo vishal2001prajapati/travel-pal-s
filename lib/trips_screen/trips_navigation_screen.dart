@@ -18,15 +18,6 @@ class TripsScreenBottomNavigation extends StatefulWidget {
 
 class _TripsScreenBottomNavigationState
     extends State<TripsScreenBottomNavigation> {
-  int _currentIndex = 0;
-  final screen = [
-    TripsScreen(),
-    MatchesScreen(),
-    PostsScreen(),
-    MessagesScreen(),
-    ProfileScreen()
-  ];
-
   @override
   Widget build(BuildContext context) {
     LandingPageController landingPageController =
