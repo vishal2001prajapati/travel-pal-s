@@ -92,6 +92,8 @@ class _ProfileScreenSixState extends State<ProfileScreenSix> {
                     onPressed: () {
                       Get.to(ProfileScreenSeven());
 
+
+
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: ConstColors.btnColor,

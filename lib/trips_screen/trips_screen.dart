@@ -11,6 +11,7 @@ class TripsScreen extends StatefulWidget {
 }
 
 class _TripsScreenState extends State<TripsScreen> {
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -18,6 +19,18 @@ class _TripsScreenState extends State<TripsScreen> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 5,
+          bottom: TabBar(
+            indicator: UnderlineTabIndicator(
+                borderSide: BorderSide(width: 2.0, color: Color(0xff01B5BB)),
+                insets: EdgeInsets.symmetric(horizontal: 35.0)),
+            labelColor: Color(0xff01B5BB),
+            labelStyle: TextStyle(
+              fontFamily: 'AmsiProNarw-SemiBold.otf',
+              fontSize: 16,
+            ),
+            unselectedLabelColor: Color(0xff9FC7C9),
+            tabs: [Tab(text: "Everywhere"), Tab(text: "Local")],
+          ),
           automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
           title: const Text(
@@ -51,29 +64,8 @@ class _TripsScreenState extends State<TripsScreen> {
               Icons.add,
               color: Colors.white,
             )),
-        body: Column(
-          children: const [
-            SizedBox(
-              height: 5,
-            ),
-            TabBar(
-              indicator: UnderlineTabIndicator(
-                  borderSide: BorderSide(width: 2.0, color: Color(0xff01B5BB)),
-                  insets: EdgeInsets.symmetric(horizontal: 35.0)),
-              labelColor: Color(0xff01B5BB),
-              labelStyle: TextStyle(
-                fontFamily: 'AmsiProNarw-SemiBold.otf',
-                fontSize: 16,
-              ),
-              unselectedLabelColor: Color(0xff9FC7C9),
-              tabs: [Tab(text: "Everywhere"), Tab(text: "Local")],
-            ),
-            Expanded(
-              child: TabBarView(
-                children: [LocalScreen(),LocalScreen()],
-              ),
-            ),
-          ],
+        body: TabBarView(
+          children: [LocalScreen(), LocalScreen()],
         ),
       ),
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:travelpals/splash_screen/splash_screen.dart';
+import 'package:travelpals/trips_screen/local_screen.dart';
+import 'package:travelpals/trips_screen/trips_screen.dart';
 import 'package:travelpals/utils/colors.dart';
 
 void main() {
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: ConstColors.PrimaryGradientColorTwo,
       ),
-      home:  SplashScreen(),
+      home:  TripsScreen(),
     );
   }
 }

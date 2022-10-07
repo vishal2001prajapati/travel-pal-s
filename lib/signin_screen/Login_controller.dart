@@ -6,6 +6,7 @@ import '../trips_screen/trips_screen.dart';
 
 class LoginController extends GetxController {
   RxBool isHiddenPassword = true.obs;
+
   final GlobalKey<FormState> loginFormKey =
       GlobalKey<FormState>(); // import material.dart
   TextEditingController emailController = TextEditingController();
