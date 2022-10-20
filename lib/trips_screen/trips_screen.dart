@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:travelpals/notification/notification_screen.dart';
+import 'package:travelpals/trips_screen/local_screen.dart';
+import 'package:travelpals/utils/colors.dart';
 
-import '../utils/colors.dart';
-import 'local_screen.dart';
 
 class TripsScreen extends StatefulWidget {
   const TripsScreen({Key? key}) : super(key: key);
@@ -52,7 +54,9 @@ class _TripsScreenState extends State<TripsScreen> {
             IconButton(
                 icon: const Icon(Icons.notifications_none_rounded,
                     color: Color(0xff334155)),
-                onPressed: () {}),
+                onPressed: () {
+                  Get.to(NotificationScreen());
+                }),
           ],
         ),
         floatingActionButton: FloatingActionButton(

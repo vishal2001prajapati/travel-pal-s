@@ -214,20 +214,6 @@ class _LocalScreenState extends State<LocalScreen> {
           subtitle: Text(_descInfo[index]),
         ),
         Container(
-          height: 20,
-          child: Padding(
-            padding: const EdgeInsets.only(
-              left: 20,
-            ),
-            child: Row(
-              children: [
-                Icon(Icons.calendar_month),
-                Text('5/10/2021 - 10/10/2021'),
-              ],
-            ),
-          ),
-        ),
-        Container(
           height: 50,
           child: Padding(
             padding: EdgeInsets.only(left: 20),
@@ -288,7 +274,7 @@ class _LocalScreenState extends State<LocalScreen> {
                   ),
                 ),
 
-                /* Obx(() => Text('${localScreenController.like.value}')),*/
+                 Obx(() => Text('${localScreenController.like.value}')),
               ],
             ),
           ),

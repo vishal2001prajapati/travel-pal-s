@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:validator/validator.dart';
 
 import '../trips_screen/trips_navigation_screen.dart';
 import '../trips_screen/trips_screen.dart';
@@ -33,6 +34,10 @@ class LoginController extends GetxController {
   }
 
   String? validateEmail(String value) {
+/*    if (Validator.isValidEmail(email: value)) {
+      return 'Provide valid Email';
+
+    }*/
     if (!GetUtils.isEmail(value)) {
       return 'Provide valid Email';
     }
